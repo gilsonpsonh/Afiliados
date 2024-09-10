@@ -54,8 +54,8 @@ function calculateSum() {
     const expressionInput = document.getElementById('expression').value;
 
     try {
-        // Avalia a expressão matemática
-        const result = eval(expressionInput.replace(',', '.'));
+        // Avalia a expressão matemática de forma segura
+        const result = new Function('return ' + expressionInput.replace(',', '.'))();
         if (isNaN(result)) {
             throw new Error('Resultado inválido.');
         }
@@ -66,7 +66,7 @@ function calculateSum() {
         document.getElementById('sum-result').textContent = `Resultado: R$ ${formattedResult}`;
         document.getElementById('expression-copy').value = expressionInput;
     } catch (error) {
-        document.getElementById('sum-result').textContent = 'Insira uma expressão válida.';
+        document.getElementById('sum-result').textContent = 'Insira uma expressão matemática válida.';
     }
 }
 
