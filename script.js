@@ -53,6 +53,13 @@ document.getElementById('clear-percentage-button').addEventListener('click', cle
 function calculateSum() {
     const expressionInput = document.getElementById('expression').value;
 
+    if (expressionInput.trim() === '') {
+        // Se a expressão estiver vazia, limpe a caixa de expressão-cópia
+        document.getElementById('sum-result').textContent = 'Resultado: R$ 0,00';
+        document.getElementById('expression-copy').value = '';
+        return;
+    }
+
     try {
         // Avalia a expressão matemática de forma segura
         const result = new Function('return ' + expressionInput.replace(',', '.'))();
