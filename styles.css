@@ -1,0 +1,387 @@
+/* Estilo para o corpo da página */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Calibri', sans-serif;
+    background: url('https://i.ibb.co/X71DbQJ/LOJA-5.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Estilo para o container das calculadoras */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 80%;
+    max-width: 1200px;
+    gap: 20px; /* Espaçamento entre as calculadoras */
+}
+
+/* Estilo para a calculadora de porcentagem */
+.percentage-calculator {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+/* Estilo para o container da calculadora de soma e novo quadrado */
+.calculators-container {
+    display: flex;
+    flex-direction: column; /* Mantém a estrutura em coluna */
+    gap: 25px; /* Espaçamento entre a calculadora de soma e o novo quadrado */
+    margin-top: 50px; /* Adicione esta linha para mover a calculadora para baixo */
+}
+
+/* Estilo para a calculadora de soma */
+.sum-calculator {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+/* Estilo para o novo quadrado */
+.additional-box {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    height: auto;
+    display: flex;
+    flex-direction: column; /* Alinha as caixas de resultado verticalmente */
+    gap: 10px; /* Espaçamento entre as caixas de resultado */
+}
+
+/* Estilo para as caixas de resultado */
+.result-box {
+    background-color: #444;
+    padding: 10px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilo para o conteúdo da caixa de resultado */
+.result-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* Estilo para o valor da caixa de resultado */
+.result-value {
+    color: #fff;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+/* Estilo para o botão de copiar */
+.copy-box-button {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+/* Efeitos do botão de copiar */
+.copy-box-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.copy-box-button:active {
+    background-color: #003d7a;
+    transform: scale(0.98);
+}
+
+/* Estilo para o título */
+h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Estilo para o grupo de entrada */
+.input-group {
+    margin-bottom: 10px;
+}
+
+/* Estilo para o campo de entrada */
+.input-group input {
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background-color: #333;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Estilo para o botão limpar */
+.clear-button, .clear-sum-button {
+    background-color: #dd1a15;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    text-align: center;
+    display: block;
+    margin: 10px auto 0;
+    width: 100px;
+}
+
+/* Efeitos do botão limpar */
+.clear-button:hover, .clear-sum-button:hover {
+    background-color: #c81010;
+    transform: scale(1.05);
+}
+
+.clear-button:active, .clear-sum-button:active {
+    background-color: #a00e0a;
+    transform: scale(0.98);
+}
+
+/* Estilo para o botão copiar */
+.copy-button {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    margin-top: 5px;
+}
+
+/* Efeitos do botão copiar */
+.copy-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.copy-button:active {
+    background-color: #003d7a;
+    transform: scale(0.98);
+}
+
+/* Estilo para o resultado da soma */
+.sum-result {
+    color: #fff;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Estilo para a mensagem de erro */
+#error-message {
+    color: #fff;
+    font-size: 12px; /* Tamanho menor da fonte */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+    word-wrap: break-word; /* Faz com que a mensagem de erro quebre linhas se for muito longa */
+}
+
+
+/* Estilo para os itens de resultado */
+.result-item {
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Estilo para o rótulo do resultado */
+.result-label {
+    font-size: 20px; /* Aumente o tamanho da fonte conforme necessário */
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Estilo para o conteúdo do resultado */
+.result-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilo para o valor do resultado */
+.result-value {
+    font-size: 20px;
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Estilo para a porcentagem */
+.percentage {
+    font-size: 28px; /* Aumente o tamanho da fonte conforme necessário */
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Estilo para a caixa de texto de cópia */
+textarea#expression-copy {
+    width: 100%;
+    height: 60px;
+    margin-top: 5px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #333;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    resize: none;
+    box-sizing: border-box;
+}
+
+/* Estilo para a notificação */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    display: none; /* Oculta por padrão */
+    z-index: 1000; /* Garante que a notificação apareça sobre outros elementos */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Exibe a notificação quando necessário */
+.notification.show {
+    display: block;
+}
+
+
+/* Estilo para a hora do resultado */
+.result-time {
+    font-size: 12px;
+    color: #bbb;
+    margin-top: 5px;
+}
+
+/* Estilo para a caixa de texto de cópia */
+textarea.expression-copy-replica {
+    width: 100%;
+    height: 40px;
+    margin-top: 5px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #333;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    resize: none;
+    box-sizing: border-box;
+}
+
+/* Estilo para a caixa expression-copy */
+.expression-copy {
+    background-color: #f0f0f0; /* Cinza claro */
+    border: 1px solid #ffffff; /* Bordas brancas */
+    padding: 10px;
+    width: 100%; /* Ajuste conforme necessário */
+    height: 100px; /* Ajuste conforme necessário */
+    box-sizing: border-box; /* Inclui padding e border no tamanho total da caixa */
+    resize: none; /* Desativa o redimensionamento manual da caixa */
+}
+
+/* Estilo para o novo quadrado */
+.additional-box {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    height: auto;
+}
+
+/* Estilo para as caixas de texto adicionais */
+.expression-copy-replica {
+    width: 100%;
+    height: 40px;
+    margin-top: 5px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #333;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    resize: none;
+    box-sizing: border-box;
+}
+
+/* Estilo para o botão copiar */
+.copy-button {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    margin-left: 5px; /* Adicione esta linha */
+    margin-top: 5px;
+}
+
+/* Efeitos do botão copiar */
+.copy-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.copy-button:active {
+    background-color: #003d7a;
+    transform: scale(0.98);
+}
+
+/* Estilo para os quadrados das últimas 2 somas */
+.last-two-sums {
+    margin-top: 20px;
+}
+
+.last-two-sum-box {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    min-height: 50px; /* Define uma altura mínima para os quadrados */
+}

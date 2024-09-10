@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Porcentagem e Soma</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Calculadora de Porcentagem -->
+        <div class="calculator percentage-calculator">
+            <h1><strong>Calculadora de Porcentagem</strong></h1>
+            <div class="input-group">
+                <input type="number" id="value" placeholder="Digite o valor" step="0.01">
+            </div>
+            <div id="error-message" class="error-message"></div>
+            <div id="results">
+                <div id="result-12" class="result-item">
+                    <div class="result-label">Resp. AFL</div>
+                    <div class="result-content">
+                        <div id="result-12-value" class="result-value">R$ 0,00</div>
+                        <div class="percentage">12%</div>
+                    </div>
+                </div>
+                <div id="result-10" class="result-item">
+                    <div class="result-label">Líder AFL</div>
+                    <div class="result-content">
+                        <div id="result-10-value" class="result-value">R$ 0,00</div>
+                        <div class="percentage">10%</div>
+                    </div>
+                </div>
+                <div id="result-8" class="result-item">
+                    <div class="result-label">Sub. Líder AFL</div>
+                    <div class="result-content">
+                        <div id="result-8-value" class="result-value">R$ 0,00</div>
+                        <div class="percentage">8%</div>
+                    </div>
+                </div>
+                <div id="result-7" class="result-item">
+                    <div class="result-label">Aux. AFL</div>
+                    <div class="result-content">
+                        <div id="result-7-value" class="result-value">R$ 0,00</div>
+                        <div class="percentage">7%</div>
+                    </div>
+                </div>
+                <div id="result-5" class="result-item">
+                    <div class="result-label">Membro AFL</div>
+                    <div class="result-content">
+                        <div id="result-5-value" class="result-value">R$ 0,00</div>
+                        <div class="percentage">5%</div>
+                    </div>
+                </div>
+            </div>
+            <button id="clear-percentage-button" class="clear-button">Limpar</button>
+        </div>
+
+        <!-- Container para a Calculadora de Soma e Novo Quadrado -->
+        <div class="calculators-container">
+<!-- Calculadora de Soma -->
+<div class="calculator sum-calculator">
+    <h1><strong>Calculadora de Soma</strong></h1>
+    <div class="input-group">
+        <input type="text" id="expression" placeholder="Digite a expressão">
+    </div>
+    <div id="sum-result" class="sum-result">Resultado: R$ 0,00</div>
+    <textarea id="expression-copy" readonly></textarea>
+    <button id="copy-button" class="copy-button">Copiar</button>
+    <button id="clear-sum-button" class="clear-sum-button">Limpar</button>
+</div>
+
+<!-- Notificação -->
+<div id="notification" class="notification"></div>
+
+<!-- Caixa da Última Soma 1 -->
+<div class="result-box" id="result-box-1">
+    <div class="result-time" id="result-time-1"></div> <!-- Hora da primeira soma -->
+    <textarea class="expression-copy-replica" id="expression-copy-1" readonly></textarea>
+    <button class="copy-button" data-target="expression-copy-1">Copiar</button>
+</div>
+
+<!-- Caixa da Última Soma 2 -->
+<div class="result-box" id="result-box-2">
+    <div class="result-time" id="result-time-2"></div> <!-- Hora da segunda soma -->
+    <textarea class="expression-copy-replica" id="expression-copy-2" readonly></textarea>
+    <button class="copy-button" data-target="expression-copy-2">Copiar</button>
+</div>
+
+<!-- Notificação -->
+<div id="notification" class="notification"></div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
+
