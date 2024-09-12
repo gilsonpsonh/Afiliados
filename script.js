@@ -37,7 +37,7 @@ function clearPercentageCalculator() {
     document.getElementById('error-message').textContent = '';
     const resultIds = [
         'result-12-value',
-        'result-10-value',
+        'result-12-value',
         'result-8-value',
         'result-7-value',
         'result-5-value'
