@@ -13,7 +13,7 @@ function calculatePercentage() {
     // Calcula e atualiza os resultados
     const percentages = {
         'result-12-value': 0.12,
-        'result-10-value': 0.10,
+        'result-12-value': 0.12,
         'result-8-value': 0.08,
         'result-7-value': 0.07,
         'result-5-value': 0.05
