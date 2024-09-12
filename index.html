@@ -8,52 +8,37 @@
 </head>
 <body>
     <div class="container">
-        <!-- Calculadora de Porcentagem -->
-        <div class="calculator percentage-calculator">
-            <h1><strong>Calculadora de Porcentagem</strong></h1>
-            <div class="input-group">
-                <input type="number" id="value" placeholder="Digite o valor" step="0.01">
-            </div>
-            <div id="error-message" class="error-message"></div>
-            <div id="results">
-                <div id="result-12" class="result-item">
-                    <div class="result-label">Responsável</div>
-                    <div class="result-content">
-                        <div id="result-12-value" class="result-value">R$ 0,00</div>
-                        <div class="percentage">12%</div>
-                    </div>
-                </div>
-                <div id="result-12" class="result-item">
-                    <div class="result-label">Auxiliar</div>
-                    <div class="result-content">
-                        <div id="result-10-value" class="result-value">R$ 0,00</div>
-                        <div class="percentage">12%</div>
-                    </div>
-                </div>
-                <div id="result-8" class="result-item">
-                    <div class="result-label">Líder</div>
-                    <div class="result-content">
-                        <div id="result-8-value" class="result-value">R$ 0,00</div>
-                        <div class="percentage">8%</div>
-                    </div>
-                </div>
-                <div id="result-7" class="result-item">
-                    <div class="result-label">Sub. Líder</div>
-                    <div class="result-content">
-                        <div id="result-7-value" class="result-value">R$ 0,00</div>
-                        <div class="percentage">7%</div>
-                    </div>
-                </div>
-                <div id="result-5" class="result-item">
-                    <div class="result-label">Membro AFL</div>
-                    <div class="result-content">
-                        <div id="result-5-value" class="result-value">R$ 0,00</div>
-                        <div class="percentage">5%</div>
-                    </div>
-                </div>
-            </div>
-            <button id="clear-percentage-button" class="clear-button">Limpar</button>
-        </div>
+<div class="container">
+
+<!-- Calculadora de Porcentagem -->
+<div class="percentage-calculator">
+    <h1>Calculadora de Porcentagem</h1>
+    <div class="input-group">
+        <input type="number" id="value" placeholder="Insira o valor" />
+    </div>
+    <div id="error-message"></div>
+    <div class="result-item">
+        <div class="result-label">12% para Responsável AFL:</div>
+        <div id="result-12-value" class="result-value">R$ 0,00</div>
+    </div>
+    <div class="result-item">
+        <div class="result-label">12% para Auxiliar AFL:</div>
+        <div id="result-aux-12-value" class="result-value">R$ 0,00</div>
+    </div>
+    <div class="result-item">
+        <div class="result-label">8% para Líder AFL:</div>
+        <div id="result-8-value" class="result-value">R$ 0,00</div>
+    </div>
+    <div class="result-item">
+        <div class="result-label">7% para Sub. Líder AFL:</div>
+        <div id="result-7-value" class="result-value">R$ 0,00</div>
+    </div>
+    <div class="result-item">
+        <div class="result-label">5% para Membro AFL:</div>
+        <div id="result-5-value" class="result-value">R$ 0,00</div>
+    </div>
+    <button class="clear-button" id="clear-percentage-button">Limpar</button>
+</div>
 
         <!-- Container para a Calculadora de Soma e Novo Quadrado -->
         <div class="calculators-container">
@@ -93,4 +78,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
