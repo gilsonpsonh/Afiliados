@@ -12,11 +12,11 @@ function calculatePercentage() {
 
     // Calcula e atualiza os resultados
     const percentages = {
-        'result-12-value': 0.12,
-        'result-12-value': 0.12,
-        'result-8-value': 0.08,
-        'result-7-value': 0.07,
-        'result-5-value': 0.05
+        'result-12-value': 0.12,        // 12% para Responsável AFL
+        'result-aux-12-value': 0.12,    // 12% para Auxiliar AFL
+        'result-8-value': 0.08,         // 8% para Líder AFL
+        'result-7-value': 0.07,         // 7% para Sub. Líder AFL
+        'result-5-value': 0.05          // 5% para Membro AFL
     };
 
     for (const [id, percentage] of Object.entries(percentages)) {
@@ -37,13 +37,17 @@ function clearPercentageCalculator() {
     document.getElementById('error-message').textContent = '';
     const resultIds = [
         'result-12-value',
-        'result-12-value',
+        'result-aux-12-value',
         'result-8-value',
         'result-7-value',
         'result-5-value'
     ];
     resultIds.forEach(id => document.getElementById(id).textContent = 'R$ 0,00');
 }
+
+// Eventos
+document.getElementById('value').addEventListener('input', onValueInputChange);
+document.getElementById('clear-percentage-button').addEventListener('click', clearPercentageCalculator);
 
 // Adiciona eventos para a Calculadora de Porcentagem
 document.getElementById('value').addEventListener('input', onValueInputChange);
